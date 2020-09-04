@@ -1,0 +1,8 @@
+<h1>All Posts </h1>
+
+<ul>
+    <% @posts.map do |post_var|%>
+         <li> <%=link_to post_var.title, post_path(post_var)%> </li>
+    <%end%>
+
+</ul>

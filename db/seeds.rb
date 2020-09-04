@@ -27,7 +27,7 @@ end
       title: Faker::Hipster.sentence(3),
       content: Faker::Hipster.paragraphs(4),
       likes: 0,
-      blogger: blogger,
+      blogger: Blogger.all.sample,
       destination: Destination.all.sample
     })
   end
