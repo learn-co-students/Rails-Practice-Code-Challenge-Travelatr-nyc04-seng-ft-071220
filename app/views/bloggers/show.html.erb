@@ -1,0 +1,10 @@
+<h1> <%= @blogger.name %> </h1>
+
+
+<%@blogger.posts.map do |post|%>
+<%if @blogger.find_post_highest_likes==post.title%>
+Post: <%=link_to post.title, post_path(post)%> | Likes: <%=post.likes%> <br/>
+<%else%>
+Post: <%=post.title%> | Likes: <%=post.likes%> <br/>
+<%end%>
+<%end%>

@@ -1,0 +1,8 @@
+<h1>All Destinations </h1>
+
+<ul>
+    <% @destinations.map do |dest_var|%>
+         <li> Name: <%=link_to dest_var.name, destination_path(dest_var)%> | Country: <%=link_to dest_var.country, destination_path(dest_var)%> </li>
+    <%end%>
+
+</ul>

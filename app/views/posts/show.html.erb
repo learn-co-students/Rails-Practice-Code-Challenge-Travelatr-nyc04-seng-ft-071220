@@ -1,0 +1,14 @@
+<h3> Title: <%= @post.title %>  </h3>
+<br/>
+
+<strong>Content:</strong> <%=@post.content%>
+<br/><br/>
+
+<strong>Author:</strong> <%=link_to @post.blogger.name , blogger_path(@post)%>
+<br/><br/>
+<strong>Destination:</strong><%=link_to @post.destination.country, destination_path(@post)%>
+
+
+<%= button_to [:post_like] do %>
+  Add Like <strong><%= @post.title %></strong>
+<% end %>
